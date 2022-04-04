@@ -17,3 +17,29 @@ There are two applications in this repository:
 You must change:
 * <YOUR_PROJECT_ID>
 * <YOUR_ENCODED_KEY>
+
+# Publishing data in a topic 
+
+There are two topics in this example one handle pure string and the other handle POJO object:
+
+### Publishing pure string
+
+curl --location --request POST 'http://localhost:8081/sendMessage?message=hello' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "phoneNumber": "5518997896607",
+    "encodeFile": "sdasdasdadadasa"
+}'
+
+### Publishing POJO object
+
+curl --location --request POST 'http://localhost:8081/sendPojo' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "phoneNumber": "5518997896607",
+    "encodeFile": "bla bla bla"
+}'
+
+
+
+
