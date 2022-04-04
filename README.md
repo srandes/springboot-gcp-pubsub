@@ -24,12 +24,7 @@ There are two topics in this example one handles pure string and the other handl
 
 ### Publishing pure string
 
-curl --location --request POST 'http://localhost:8081/sendMessage?message=hello' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "phoneNumber": "5518997896607",
-    "encodeFile": "sdasdasdadadasa"
-}'
+curl --location --request POST 'http://localhost:8081/sendMessage?message=hello'
 
 ### Publishing POJO object
 
