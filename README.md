@@ -20,7 +20,7 @@ You must change:
 
 # Publishing data in a topic 
 
-There are two topics in this example one handle pure string and the other handle POJO object:
+There are two topics in this example one handles pure string and the other handles POJO object:
 
 ### Publishing pure string
 
@@ -37,7 +37,7 @@ curl --location --request POST 'http://localhost:8081/sendPojo' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "phoneNumber": "5518997896607",
-    "encodeFile": "bla bla bla"
+    "encodeFile": "erwerwerdfsd5sfsd878978979879rere"
 }'
 
 
