@@ -14,6 +14,7 @@ public class SenderConfig {
 
     private static final String STRING_TOPIC = "test-string-topic";
     private static final String POJO_TOPIC = "test-pojo-topic";
+    private static final String FILTER_TOPIC = "test-filter-topic";
 
     @Bean
 	@ServiceActivator(inputChannel = "stringOutputChannel")
@@ -29,5 +30,15 @@ public class SenderConfig {
     ) {
         pubSubTemplate.setMessageConverter(jacksonPubSubMessageConverter);
         return new PubSubMessageHandler(pubSubTemplate, POJO_TOPIC);
+    }
+
+    @Bean
+    @ServiceActivator(inputChannel = "filterOutputChannel")
+    public PubSubMessageHandler filterSender(
+        PubSubTemplate pubSubTemplate,
+        JacksonPubSubMessageConverter jacksonPubSubMessageConverter
+    ) {
+        pubSubTemplate.setMessageConverter(jacksonPubSubMessageConverter);
+        return new PubSubMessageHandler(pubSubTemplate, FILTER_TOPIC);
     }
 }
