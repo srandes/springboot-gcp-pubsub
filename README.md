@@ -9,7 +9,7 @@ There are two applications in this repository:
 
 # Setup the applications
 
- Generate a key file from a service account of your google cloud console and replace it on the files:
+ Generate a key file from a service account of your google cloud console and replace it in the files:
  
  * /receiver/src/main/resources/application.yaml
  * /sender/src/main/resources/application.yaml
